@@ -1,0 +1,29 @@
+@use './fonts';
+@use './normalize';
+@use './variables';
+@use './globals';
+@use './utils';
+
+@use './blocks/logo';
+@use './blocks/button';
+@use './blocks/burger';
+@use './blocks/overlay';
+@use './blocks/header';
+
+@use './blocks/section';
+@use './blocks/hero';
+
+@use './blocks/vr';
+
+@use './blocks/xbox';
+
+@use './blocks/plan';
+@use './blocks/pricing';
+
+@use './blocks/footer';
+
+@use './blocks/animations';
+
+//.hero{
+//  display: none !important;
+//}

@@ -1,0 +1,23 @@
+@use 'helpers' as *;
+
+:root{
+  --color-light: #fff;
+  --color-blue: #4499D9;
+  --color-blue-grey: #446381;
+  --color-red: #EB8382;
+  --color-cloudy-purple: #826F8C;
+  --color-peach: #FFE6D7;
+  --color-peach-alt: #FCD8CB;
+
+
+  --gradient: linear-gradient(93deg, #4499D9 11.62%, #6E6CC1 75.39%);
+  --gradient-hover: linear-gradient(93deg, #4499D9 100%);
+
+  --border: 2px solid var(--color-cloudy-purple);
+
+  --container-width: #{rem(1160)};
+  --container-padding-x: 1rem;
+
+  --transition-duration: 0.3s;
+  --transition: all 0.3s ease;
+}

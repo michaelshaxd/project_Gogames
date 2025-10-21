@@ -1,0 +1,12 @@
+@use '../helpers' as *;
+
+.header{
+  margin-bottom: fluid(54,40);
+
+  &__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: fluid(20,12);
+  }
+}

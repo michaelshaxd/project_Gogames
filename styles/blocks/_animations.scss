@@ -1,0 +1,64 @@
+@use '../helpers' as *;
+
+.gear{
+  animation: rotate 6.5s linear infinite;
+}
+
+@keyframes rotate {
+  from { rotate: 0deg }
+  to { rotate: 360deg }
+}
+
+.joystick{
+  animation: moveY 4s ease infinite;
+}
+
+@keyframes moveY {
+  from { transform: translateY(0) }
+  50% { transform: translateY(5%) }
+  to { transform: translateY(0) }
+}
+
+.cross{
+  animation: rotateReverse 12s linear reverse infinite;
+}
+
+@keyframes rotateReverse {
+  from { rotate: 0deg }
+  to { rotate: -360deg }
+}
+
+.boy{
+  animation: boyTranslateY 1.5s ease;
+}
+
+@keyframes boyTranslateY {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sparks{
+  animation:
+    sparksAppearance
+    ease
+    2s
+    forwards;
+  animation-delay: 1.5s;
+  transform: scale(0);
+}
+
+@keyframes sparksAppearance {
+  from {
+    transform: scale(0);
+  }
+
+  to{
+    transform: scale(1);
+  }
+}

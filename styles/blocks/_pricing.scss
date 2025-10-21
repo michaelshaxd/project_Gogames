@@ -1,0 +1,19 @@
+@use '../helpers' as *;
+
+.pricing{
+  &__inner{
+    padding-block: fluid(48,60) fluid(72,60);
+    text-align: center;
+  }
+
+  &__planes-list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: fluid(40,24);
+
+    @include tablet{
+      grid-template-columns: 1fr;
+    }
+  }
+}

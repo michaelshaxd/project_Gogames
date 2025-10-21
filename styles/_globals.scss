@@ -1,0 +1,87 @@
+@use 'helpers' as *;
+
+html{
+  &.is-lock{
+    overflow: hidden;
+  }
+}
+
+body {
+  font-size: fluid(18, 14);
+
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 500;
+  color: var(--color-cloudy-purple);
+  background-color: var(--color-peach);
+}
+
+body p{
+  line-height: 1.61;
+}
+
+h2, .h2 {
+  font-size: fluid(68, 28);
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+h3, .h3 {
+  font-size: fluid(32, 24);
+  font-weight: 500;
+}
+
+h4, .h4 {
+  font-size: fluid(23, 18);
+
+  line-height: 1.04;
+  font-weight: 500;
+}
+
+h5, .h5 {
+  font-size: fluid(19, 15);
+
+  line-height: 1.2;
+}
+
+a,
+button,
+label,
+select,
+textarea,
+input,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a{
+  color: inherit;
+
+  &[class]{
+    text-decoration: none;
+  }
+}
+
+:focus-visible{
+  outline: rem(1) dashed var(--color-red);
+  outline-offset: rem(2);
+  transition-duration: 0s !important;
+}
+
+a,
+button{
+  &[aria-label]{
+    position: relative;
+
+    &::after{
+      @include abs-center;
+      @include square(rem(44));
+
+      content: '';
+    }
+  }
+}
+
+img{
+  user-select: none;
+  pointer-events: none;
+}

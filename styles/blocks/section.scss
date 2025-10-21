@@ -1,0 +1,37 @@
+@use '../helpers' as *;
+
+.section{
+  margin-bottom: fluid(60,50);
+
+  &__inner{
+    display: grid;
+    grid-template-columns: 50% auto;
+    align-items: center;
+    column-gap: fluid(70,32);
+    position: relative;
+
+    @include mobile{
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
+    }
+  }
+
+  &__subtitle{
+    margin-bottom: fluid(26,14);
+  }
+
+  &__title{
+    color: var(--color-red);
+    font-weight: 500;
+    margin-bottom: fluid(31,16);
+  }
+
+  &__description{
+    margin-bottom: fluid(36,20);
+  }
+
+  &__link{
+    justify-self: start;
+  }
+}

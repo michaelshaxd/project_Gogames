@@ -1,0 +1,103 @@
+@use '../helpers' as *;
+
+.hero{
+  margin-bottom: fluid(120, 100);
+
+  &__inner{
+    position: relative;
+
+    @include mobile{
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__body{
+    position: relative;
+
+    &::before{
+      @include square(118px);
+
+      content: '';
+      position: absolute;
+      top: 50px;
+      left: -190px;
+      background: url('../../images/hero/cross-transparent.png') 0 0/cover no-repeat;
+    }
+  }
+
+  &__subtitle{
+    max-width: max-content;
+    position: relative;
+
+    &::after{
+      content: '';
+      width: 129px;
+      height: 29px;
+      position: absolute;
+      top: 50%;
+      translate: 0 -50%;
+      left: calc(100% + 31px);
+      background: url('../../images/hero/arrows.png') 0 0/cover no-repeat;
+    }
+  }
+
+  &__title{
+    span{
+      color: var(--color-blue-grey);
+
+      .price{
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__cross{
+    position: absolute;
+    translate: 230%;
+    width: 30%;
+    max-width: 118px;
+  }
+
+  &__picture{
+    position: relative;
+
+    &-hole{
+      position: absolute;
+      bottom: 0;
+    }
+
+    &-main{
+      position: relative;
+      width: 100%;
+    }
+
+    &-sparks{
+      position: absolute;
+      left: 55%;
+      top: 5%;
+      translate: -50%;
+      width: 90%;
+      z-index: 300;
+    }
+
+    &-boy{
+      position: relative;
+      z-index: 400;
+      width: 90.5%;
+    }
+
+    &-box-1{
+      position: absolute;
+      left: -30%;
+      top: -7%;
+      z-index: 400;
+    }
+
+    &-box-2{
+      position: absolute;
+      right: -28%;
+      bottom: -10%;
+      z-index: 400;
+    }
+  }
+}

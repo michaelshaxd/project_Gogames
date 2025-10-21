@@ -1,0 +1,81 @@
+@use '../helpers' as *;
+
+.overlay{
+  display: flex;
+  column-gap: fluid(55, 45);
+  z-index: 500;
+
+  @include tablet{
+    position: fixed;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    min-width: rem(330);
+
+    padding: rem(80) rem(40);
+    flex-direction: column;
+    row-gap: rem(30);
+    background-color: var(--color-light);
+    border-radius: 50%;
+    transition: var(--transition);
+    transition-duration: 0.4s;
+  }
+
+  &.is-opened{
+    border-radius: 0;
+    right: 0;
+  }
+
+  &__nav{
+    display: flex;
+
+    &-list{
+      display: flex;
+      gap: fluid(45, 40);
+
+      @include tablet{
+        width: 100%;
+        align-items: center;
+        row-gap: rem(30);
+        flex-direction: column;
+      }
+    }
+
+    &-item{
+      display: flex;
+      flex-shrink: 0;
+    }
+
+    @include tablet{
+      font-size: rem(25);
+    }
+
+    &-link{
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &::after{
+        content:'';
+        position: absolute;
+        left: 0;
+        top: calc(100% - #{rem(12)});
+        height: 2px;
+        background-color: var(--color-blue);
+        width: 0;
+        transition-duration: var(--transition-duration);
+
+        @include tablet{
+          top: 100%;
+        }
+      }
+
+      @include hover{
+        &::after{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

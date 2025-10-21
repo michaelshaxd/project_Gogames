@@ -1,0 +1,46 @@
+@use '../helpers' as *;
+
+.footer{
+  border-top: var(--border);
+
+  &__inner{
+    padding-block: rem(25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__copyright{
+    font-size: rem(16);
+  }
+  
+  &__soc1als{
+    &-list{
+      display: flex;
+      align-items: center;
+      column-gap: 18px;
+    }
+
+    &-link{
+      @include square(40px);
+
+      border-radius: 50%;
+      position: relative;
+      background-color: var(--color-peach-alt);
+
+      svg{
+        @include abs-center;
+      }
+
+      @include hover{
+        background-color: var(--color-red);
+
+        *{
+          fill: var(--color-light);
+        }
+      }
+    }
+  }
+}
